@@ -1,6 +1,6 @@
 ###############################################################
 # Cleaning and denoising 16S data                             #
-# Data: Miseq-16S - bacteria - Subset L'Acadie (ACA)          #
+# Data: Miseq-16S - Bacteria - Subset L'Acadie (ACA)          #
 # Mona Parizadeh - 2020-2021                                  #
 ###############################################################
 
