@@ -6,7 +6,7 @@
 ###### Note 2: The present analyses have been performed on demultiplexed sequence data processed using Qiime II and DADA2.
 #
 #### Steps of data analysis:
-- Quality control, denoising and cleaning data
+- Quality control, denoising and cleaning data (nematode and bacteria samples)
 - Explanatory analysis 
 - Faunal analysis 
-- Network analysis
+- Network analysis (nematode-bacteria co-occurrence network)
