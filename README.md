@@ -2,5 +2,13 @@
 #### Analysis of the soil nematode communities and nematode-bacteria co-occurrence networks
 
 #### Data type: Miseq 18S amplicon sequencing data
-Note 1: The samples have been randomly sequenced in multiple sequencing runs.
-Note 2: The present analyses have been performed on demultiplexed sequence data of only one sampling site (ACA).
+###### Note 1: The samples have been randomly sequenced in multiple sequencing runs.
+###### Note 2: The present analyses have been performed on demultiplexed sequence data of only one sampling site (ACA).
+#
+#### Steps of data analysis:
+- DADA2 analysis of different sequening runs individually 
+- Merge the final results of multiple runs and assign taxonomy
+- Quality control, denoising and cleaning data
+- Explanatory analysis 
+- Faunal analysis 
+- Network analysis
