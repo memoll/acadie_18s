@@ -8,5 +8,5 @@
 #### Steps of data analysis:
 - Quality control, denoising and cleaning data (nematode and bacteria samples)
 - Explanatory analysis 
-- Faunal analysis (soil food web, based on [NINJA] (https://shiny.wur.nl/ninja/) results)
+- Faunal analysis (soil food web, based on the results of [NINJA](https://shiny.wur.nl/ninja/) analyses)
 - Network analysis (nematode-bacteria co-occurrence network)
