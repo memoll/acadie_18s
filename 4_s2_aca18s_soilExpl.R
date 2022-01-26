@@ -229,5 +229,3 @@ gg.neo.fml.trpc = nema.melt_neo.fml.trpc %>%
   labs(tag = "B)") + theme(plot.tag = element_text(size = 18, face = "bold"))
 gg.neo.fml.trpc
 
-#save ####
-save.image("a2_2_s2_exp_aca_18S_nema_soil_trophicGr.RData")
