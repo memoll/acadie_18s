@@ -8,6 +8,7 @@
 library(phyloseq); packageVersion("phyloseq") #‘1.34.0’
 library(vegan); packageVersion("vegan") #‘2.5.7’
 library(ggplot2); packageVersion("ggplot2") #‘3.3.3’
+library(tidyverse); packageVersion("tidyverse") #‘1.3.0’
 
 # Import data #### 
 setwd("../mp/aca_18s/files/")
