@@ -1,6 +1,6 @@
 ###############################################################
 # Cleaning and denoising 18S data                             #
-# Data: Miseq-18S - all Runs - Subset L'Acadie (ACA)          #
+# Data: Miseq-18S - Nematodes - Subset L'Acadie (ACA)         #
 # Mona Parizadeh - 2020-2021                                  #
 ###############################################################
 
