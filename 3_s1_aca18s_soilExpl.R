@@ -165,7 +165,5 @@ dim(left_join(rel_abund_ctl,rel_abund_neo,by = "Family"))
 rel_abund_neo.ctl = rbind(rel_abund_neo, rel_abund_ctl)
 View(rel_abund_neo.ctl)
 
-#save ####
-save.image("a2_2_s1_exp_aca_18S_nema_soil1000.RData")
 
 
