@@ -205,4 +205,3 @@ sd(asv.rare.rich$Observed, na.rm=TRUE) /
 #save
 saveRDS(ps2, "18S_nema_aca_soil.rds")
 saveRDS(ps.rare, "18S_nema_aca_soil1000.rds")
-save.image("a2_1_qc3_aca_18S_nema.RData")
