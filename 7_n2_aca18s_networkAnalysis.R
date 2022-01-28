@@ -328,20 +328,6 @@ plot.ctl.both <- ggplot(ggnet.ctl, aes(x = x, y = y, xend = xend, yend = yend)) 
          size = FALSE) 
 plot.ctl.both
 
-ggplot(ggnet.ctl[300:400,], aes(x = x, y = y, xend = xend, yend = yend)) + 
-  theme_blank() + 
-  geom_edges(aes(linetype = sign), color = "antiquewhite4",size=0.7,alpha = 0.5) + 
-  scale_linetype_manual(labels=c("Negative","Positive"), values=c(1,1)) + 
-  labs(linetype="Type of correlation") + 
-  geom_nodes(aes(color = Phylum, size = vsize,shape = Kingdom),alpha = 0.8) + 
-  scale_size_continuous(range=c(2,12)) +
-  scale_color_manual("Phylum",values = c("yellowgreen","tomato3","darkolivegreen4","indianred1","aquamarine2",
-                                         "darkgoldenrod1","cyan3","red2","darkorange2","chartreuse3",
-                                         "mediumvioletred","seagreen","antiquewhite4","cornflowerblue","tan4")) +
-  scale_shape_manual("Microbial Community", labels = c("Bacteria"="Bacteria", "Metazoa"="Nematodes"), values = c(19,17)) +
-  theme(plot.tag = element_text(size = 18, face = "bold")) +
-  theme(legend.position = "none")
-
 #%---Neonic ####
 sparcc.graph.filt.neo = eco.net.neo.both[2][[1]]
 #igraph 
@@ -409,22 +395,6 @@ plot.neo.both <- ggplot(ggnet.neo, aes(x = x, y = y, xend = xend, yend = yend)) 
          shape = guide_legend(override.aes = list(size=6)),
          size = FALSE) 
 plot.neo.both
-
-ggplot(ggnet.neo, aes(x = x, y = y, xend = xend, yend = yend)) + 
-  theme_blank() + 
-  geom_edges(aes(linetype = sign), color = "antiquewhite4",size=0.7,alpha = 0.5) + 
-  scale_linetype_manual(labels=c("Negative","Positive"), values=c(1,1)) + 
-  labs(linetype="Type of correlation") + 
-  geom_nodes(aes(color = Phylum, size = vsize,shape = Kingdom),alpha = 0.8) + 
-  scale_size_continuous(range=c(2,12)) +
-  scale_color_manual("Phylum",values = c("yellowgreen","tomato3","darkolivegreen4","indianred1","darkgoldenrod1",
-                                         "cyan2","red2","darkorange2","chartreuse3","mediumvioletred",
-                                         "seagreen","antiquewhite4","cornflowerblue","tan4")) +
-  geom_nodetext_repel(aes(label = vertex.names),max.overlaps = Inf,cex = 2.7,color="black",fontface = "bold",
-                      segment.size = 0.02, segment.colour = "gray") + #, box.padding = unit(1, "lines")
-  scale_shape_manual("Microbial Community", labels = c("Bacteria"="Bacteria", "Metazoa"="Nematodes"), values = c(19,17)) +
-  theme(plot.tag = element_text(size = 18, face = "bold")) +
-  theme(legend.position = "none")
 
 #NULL MODELS ####
 #Networks ####
