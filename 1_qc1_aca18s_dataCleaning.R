@@ -12,7 +12,11 @@ library(tidyverse); packageVersion("tidyverse") #‘1.3.0’
 
 # Import data #### 
 setwd("../mp/aca_18s/files/")
-ps = readRDS("ps.rds") 
+ps.all = readRDS("ps.rds") 
+
+# Filter nematodes ####
+ps = subset_taxa(ps.all, Phylum =="D_1__nematoda")  
+ps = prune_samples(sample_sums(ps)>0, ps); ps
 
 #Explore controls ####
 #%Positive controls ####
