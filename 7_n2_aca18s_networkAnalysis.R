@@ -268,7 +268,7 @@ sparcc.graph.filt.ctl = eco.net.ctl.both[2][[1]]
 #igraph 
 ig.sparcc.ctl = adj2igraph(sparcc.graph.filt.ctl, vertex.attr=list(name=colnames(sparcc.graph.filt.ctl)))
 plot.igraph(ig.sparcc.ctl) #check the nodes (compare randomly with View(table_cor.ctl01))
-vsize.ctl = colMeans(clr(otu_table(ps.filt.ctl)[,colnames(sparcc.graph.filt.ctl)],1)) #for ggnetwork (should give ASVs)
+vsize.ctl = rowMeans(clr(otu_table(ps.filt.ctl)[,colnames(sparcc.graph.filt.ctl)],1)) #for ggnetwork (should give ASVs)
 #attributes #### 
 length(E(ig.sparcc.ctl)) #number of edges
 length(V(ig.sparcc.ctl)) #number of nodes
@@ -333,7 +333,7 @@ sparcc.graph.filt.neo = eco.net.neo.both[2][[1]]
 #igraph 
 ig.sparcc.neo = adj2igraph(sparcc.graph.filt.neo, vertex.attr=list(name=colnames(sparcc.graph.filt.neo)))
 plot.igraph(ig.sparcc.neo) #check the nodes (compare randomly with View(table_cor.neo01))
-vsize.neo = colMeans(clr(otu_table(ps.filt.neo)[,colnames(sparcc.graph.filt.neo)],1)) #for ggnetwork (should give ASVs)
+vsize.neo = rowMeans(clr(otu_table(ps.filt.neo)[,colnames(sparcc.graph.filt.neo)],1)) #for ggnetwork (should give ASVs)
 
 tax_new = tax_table(ps.filt.neo)[match(colnames(sparcc.graph.filt.neo), rownames(tax_table(ps.filt.neo)),nomatch = NA)]
 
