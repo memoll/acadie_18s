@@ -269,12 +269,15 @@ sparcc.graph.filt.ctl = eco.net.ctl.both[2][[1]]
 ig.sparcc.ctl = adj2igraph(sparcc.graph.filt.ctl, vertex.attr=list(name=colnames(sparcc.graph.filt.ctl)))
 plot.igraph(ig.sparcc.ctl) #check the nodes (compare randomly with View(table_cor.ctl01))
 vsize.ctl = rowMeans(clr(otu_table(ps.filt.ctl)[,colnames(sparcc.graph.filt.ctl)],1)) #for ggnetwork (should give ASVs)
+#match
+tax_new_ctl = tax_table(ps.filt.ctl)[match(colnames(sparcc.graph.filt.ctl), rownames(tax_table(ps.filt.ctl)),nomatch = NA)]
+
 #attributes #### 
 length(E(ig.sparcc.ctl)) #number of edges
 length(V(ig.sparcc.ctl)) #number of nodes
-vertex_attr(ig.sparcc.ctl, "Kingdom" ) <- as.character(tax_table(ps.filt.ctl)[,1])
-vertex_attr(ig.sparcc.ctl, "Phylum" ) <- as.character(tax_table(ps.filt.ctl)[,2])
-vertex_attr(ig.sparcc.ctl, "Family" ) <- as.character(tax_table(ps.filt.ctl)[,5])
+vertex_attr(ig.sparcc.ctl, "Kingdom" ) <- as.character(tax_new_ctl[,1])
+vertex_attr(ig.sparcc.ctl, "Phylum" ) <- as.character(tax_new_ctl[,2])
+vertex_attr(ig.sparcc.ctl, "Family" ) <- as.character(tax_new_ctl[,5])
 vertex_attr(ig.sparcc.ctl, "vsize" ) <- vsize.ctl
 #edge_list
 edge_list.ctl <- data.frame(as_edgelist(ig.sparcc.ctl)) 
@@ -334,7 +337,7 @@ sparcc.graph.filt.neo = eco.net.neo.both[2][[1]]
 ig.sparcc.neo = adj2igraph(sparcc.graph.filt.neo, vertex.attr=list(name=colnames(sparcc.graph.filt.neo)))
 plot.igraph(ig.sparcc.neo) #check the nodes (compare randomly with View(table_cor.neo01))
 vsize.neo = rowMeans(clr(otu_table(ps.filt.neo)[,colnames(sparcc.graph.filt.neo)],1)) #for ggnetwork (should give ASVs)
-
+#match
 tax_new = tax_table(ps.filt.neo)[match(colnames(sparcc.graph.filt.neo), rownames(tax_table(ps.filt.neo)),nomatch = NA)]
 
 #attributes #### 
