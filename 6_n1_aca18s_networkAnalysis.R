@@ -24,13 +24,13 @@ setwd("../mp/aca_18s/files/")
 #Nematodes ####
 ps.nema = readRDS("18S_nema_aca_soil1000.rds")
 ps.nema
-ps.nema.fam = tax_glom(ps.nema, "Family") #agglomerate at genus level
+ps.nema.fam = tax_glom(ps.nema, "Family") #agglomerate at family level
 ps.nema.fam
 #Bacteria ####
 ps.bac = readRDS("16S_aca_soil10000.rds")
 ps.bac = phyloseq(otu_table(ps.bac),tax_table(ps.bac),sample_data(ps.bac)) #remove tree
 ps.bac
-ps.bac.fam = tax_glom(ps.bac, "Family") #agglomerate at genus level
+ps.bac.fam = tax_glom(ps.bac, "Family") #agglomerate at family level
 ps.bac.fam
 
 #Merge nematode and bacteria ####
